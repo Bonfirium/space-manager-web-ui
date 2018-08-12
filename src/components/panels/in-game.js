@@ -1,6 +1,6 @@
-import BaseComponent from './_base';
-import InventoryPanel from './panels/inventory-panel';
-import NewPeoplesPanel from './panels/new-peoples';
+import BaseComponent from '../_base';
+import InventoryPanel from './inventory-panel';
+import NewPeoplesPanel from './new-peoples';
 
 export default class InGamePanel extends BaseComponent {
 
