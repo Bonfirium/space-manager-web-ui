@@ -1,5 +1,6 @@
 import * as PIXI from 'pixi.js';
 import BaseLoader from './_base';
+import InventoryPanel from '../assets/images/inventory-panel.png';
 
 /**
  *  ## USAGE
@@ -15,6 +16,7 @@ export default class ImagesLoader extends BaseLoader {
 	constructor() {
 		super();
 		this.imagesToLoad = [
+			InventoryPanel,
 		];
 		this.imagesToLoad.forEach((image) => {
 			// resource id is a same as path to this image
