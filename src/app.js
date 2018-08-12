@@ -1,7 +1,6 @@
 import * as PIXI from 'pixi.js';
 import loadResources from './loaders';
-import InGamePanel from './components/panels/in-game';
-import OfficePresenter from './components/presenters/office';
+import GameComponent from './components/game';
 
 // noinspection JSValidateTypes
 /** @type {PIXI.Application} */
@@ -11,10 +10,5 @@ document.body.appendChild(app.view);
 
 (async () => {
 	await loadResources();
-	const inGamePanel = new InGamePanel();
-	app.stage.addChild(inGamePanel.container);
-	const officePresenter = new OfficePresenter(window.innerWidth - 256, window.innerHeight - 96 - 256);
-	officePresenter.x = window.innerWidth / 2;
-	officePresenter.y = (window.innerHeight - 96) / 2;
-	app.stage.addChild(officePresenter.container);
+	app.stage.addChild(new GameComponent().container);
 })();
